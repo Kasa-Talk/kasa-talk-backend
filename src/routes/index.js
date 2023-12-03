@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const express = require('express');
 const Kataroute = require('./kata.route');
 const userRouter = require('./user.route');
@@ -18,3 +19,10 @@ route.use('*', (req, res) => {
 });
 
 module.exports = route;
+=======
+const Kataroute = require('./kata.route');
+
+module.exports = {
+  Kataroute,
+};
+>>>>>>> main

@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 const { Model } = require('sequelize');
 const { v4: uuidv4 } = require('uuid');
 const moment = require('moment');
 const { encrypt } = require('../utils/bcrypt');
 require('dotenv').config();
 
+=======
+'use strict';
+const {
+  Model
+} = require('sequelize');
+>>>>>>> main
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     /**
@@ -11,11 +18,15 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
+<<<<<<< HEAD
     // eslint-disable-next-line no-unused-vars
+=======
+>>>>>>> main
     static associate(models) {
       // define association here
     }
   }
+<<<<<<< HEAD
   User.init(
     {
       id: {
@@ -68,5 +79,17 @@ module.exports = (sequelize, DataTypes) => {
       timezone: '+08:00',
     },
   );
+=======
+  User.init({
+    email: DataTypes.STRING,
+    name: DataTypes.STRING,
+    password: DataTypes.STRING,
+    isActive: DataTypes.BOOLEAN,
+    avatarUrl: DataTypes.STRING,
+  }, {
+    sequelize,
+    modelName: 'User',
+  });
+>>>>>>> main
   return User;
 };
