@@ -95,8 +95,6 @@ const addKata = async (req, res) => {
       audioUrl,
       contohPenggunaan,
     } = req.body
-
-    console.log(req.body + 'aku')
   
    const newKata = await kata.create({
       indonesia: indonesia,
